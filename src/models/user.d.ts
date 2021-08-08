@@ -1,4 +1,4 @@
 export type User = {
-    id: String;
-    name: String;
+    id: string;
+    name: string;
 }

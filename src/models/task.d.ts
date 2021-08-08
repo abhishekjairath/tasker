@@ -3,9 +3,9 @@ import { Project } from './project';
 import { Status } from '../constants/status';
 
 export type Task = {
-    id: String;
-    title: String;
-    description?: String;
+    id: string;
+    title: string;
+    description?: string;
     projects?: Project[];
     assignedTo?: User;
     status: Status;
