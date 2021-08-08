@@ -10,6 +10,7 @@ import './App.css';
 
 import { NavBar } from "./components/Navbar";
 import { Tasks } from "./pages/tasks";
+import { Home } from "./pages/home";
 
 const { Content, Footer } = Layout;
 
@@ -17,20 +18,13 @@ export default function BasicExample() {
   return (
     <>
       <Router>
-        <Layout>
+        <Layout className="layout">
           <NavBar />
-
-          <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-            <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+          <Content className="site-layout" style={{ padding: '0 50px', marginTop: '60px' }}>
+            <div className="site-layout-background" style={{ margin: '16px 0' }}>
               <Switch>
                 <Route exact path="/">
                   <Home />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="/dashboard">
-                  <Dashboard />
                 </Route>
                 <Route path="/tasks">
                   <Tasks />
@@ -38,37 +32,9 @@ export default function BasicExample() {
               </Switch>
             </div>
           </Content>
-
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          <Footer style={{ textAlign: 'center' }}>Tasked ©2021 Created by AJ</Footer>
         </Layout>
       </Router>
     </>
-  );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }

@@ -4,3 +4,10 @@ export enum Status {
     inProgress = 1,
     done = 2,
 }
+
+export const StatusTitle = {
+    [Status.done]: "Done",
+    [Status.inProgress]: "In Progress",
+    [Status.todo]: "To Do",
+    [Status.deleted]: "Deleted",
+};
